@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Meraj Jarvis AI</string>
+    <string name="accessibility_service_label">Meraj Jarvis AI Automation Service</string>
+    <string name="accessibility_service_description">Autonomous touch automation, screen perception, and hands-free assistive execution for Meraj Jarvis AI.</string>
+</resources>
