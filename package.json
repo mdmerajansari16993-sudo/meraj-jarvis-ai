@@ -1,0 +1,11 @@
+{
+  "name": "meraj-jarvis-ai",
+  "version": "1.0.0",
+  "description": "Meraj Jarvis AI Web Edition - Autonomous Companion, HID Automation, Dual-Mode & Gaming Key-Mapping Hub",
+  "scripts": {
+    "start": "serve ."
+  },
+  "keywords": ["ai", "jarvis", "meraj", "assistant", "gaming-key-mapper", "hid-automation"],
+  "author": "Meraj Ansari",
+  "license": "MIT"
+}

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meraj Jarvis AI - Ultimate Autonomous Companion</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top App Header -->
+  <header class="app-header">
+    <div class="header-container">
+      <div class="brand-section">
+        <div class="arc-reactor">
+          <div class="arc-core"></div>
+        </div>
+        <div>
+          <h1 class="brand-title">MERAJ JARVIS AI</h1>
+          <p class="brand-subtitle">Autonomous Kernel Engine • 24/7 Active</p>
+        </div>
+      </div>
+      <div class="header-actions">
+        <span class="badge-vip" onclick="showToast('VIP Active: ₹99/15 Days & ₹199/30 Days Plan Valid')">👑 VIP ACTIVE</span>
+        <button class="btn-power" onclick="showToast('Autonomous Background Daemon Active 24/7')">⏻ POWER</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Glowing Minimal Neural Voice Visualizer -->
+  <div class="voice-visualizer-bar">
+    <div class="voice-wave">
+      <div class="wave-dot"></div>
+      <div class="wave-dot"></div>
+      <div class="wave-dot"></div>
+    </div>
+    <span class="voice-status-text" id="voice-status">Jarvis Neural Voice Ready • Standing By</span>
+  </div>
+
+  <!-- Main Dashboard Content -->
+  <main class="main-content">
+
+    <!-- Telemetry Badges -->
+    <section class="telemetry-row">
+      <div class="telemetry-chip">
+        <span class="dot-green"></span>
+        <span>Bluetooth HID: Active</span>
+      </div>
+      <div class="telemetry-chip">
+        <span class="dot-green"></span>
+        <span>USB OTG: Optical Mouse & Mechanical Keyboard</span>
+      </div>
+      <div class="telemetry-chip">
+        <span class="dot-green"></span>
+        <span>Zero ID-Ban Protocol: Verified</span>
+      </div>
+    </section>
+
+    <!-- Command Directive Input Bar -->
+    <section class="command-input-container">
+      <button class="btn-mic" id="btn-mic" title="Voice Directive">🎤</button>
+      <input type="text" class="command-input" id="command-input" placeholder="Command Jarvis (e.g. 'Flipkart par 5 no shoes dikhao')...">
+      <button class="btn-send" id="btn-send">SEND</button>
+    </section>
+
+    <!-- Assistant Operating Modes -->
+    <h2 class="section-header">Assistant Operating Modes</h2>
+    <section class="modes-container">
+
+      <!-- 1. Medium Mode Card -->
+      <article class="mode-card active" id="card-medium" onclick="launchMediumMode()">
+        <div class="mode-card-header">
+          <div class="mode-title-group">
+            <span class="mode-icon">🧭</span>
+            <span class="mode-title">Medium Mode</span>
+          </div>
+          <span class="mode-badge">Standard • Free</span>
+        </div>
+        <p class="mode-description">General queries, web search, app opening assistance, and screenshot/visual interactions.</p>
+      </article>
+
+      <!-- 2. Automatic Mode Card (1-Day Free Trial) -->
+      <article class="mode-card" id="card-auto" onclick="launchAutomaticMode()">
+        <div class="mode-card-header">
+          <div class="mode-title-group">
+            <span class="mode-icon">✨</span>
+            <span class="mode-title">Automatic Mode</span>
+          </div>
+          <span class="mode-badge gold">1-Day Free Trial (24h left)</span>
+        </div>
+        <p class="mode-description">Full-device automated hands-free controls & task execution. No screen touching required. Autonomously navigates apps and tasks.</p>
+      </article>
+
+      <!-- 3. Gaming Key-Mapping Mode Card (100% Free Forever) -->
+      <article class="mode-card" id="card-gaming" onclick="launchGamingMode()">
+        <div class="mode-card-header">
+          <div class="mode-title-group">
+            <span class="mode-icon">⌨️</span>
+            <span class="mode-title">Gaming Key-Mapping Mode</span>
+          </div>
+          <span class="mode-badge green">100% Free • Zero VIP Gating</span>
+        </div>
+        <p class="mode-description">Panda / Octopus style physical peripheral mapping with 1-Tap Key Assignment & 360° Mouse Look. Completely FREE with zero VIP gating and 100% anti-ban safety via kernel Bluetooth HID.</p>
+
+        <!-- Interactive HUD Canvas Preview -->
+        <div class="gaming-hud-preview">
+          <div class="hud-canvas">
+            <div class="hud-crosshair"></div>
+            <!-- Key Nodes (1-Tap Assignment) -->
+            <div class="hud-key-node run" id="btn_run" onclick="event.stopPropagation(); openKeyRebindPrompt('btn_run')">
+              SHIFT
+              <span class="hud-key-action">SPRINT</span>
+            </div>
+            <div class="hud-key-node scope" id="btn_scope" onclick="event.stopPropagation(); openKeyRebindPrompt('btn_scope')">
+              M2
+              <span class="hud-key-action">SCOPE</span>
+            </div>
+            <div class="hud-key-node jump" id="btn_jump" onclick="event.stopPropagation(); openKeyRebindPrompt('btn_jump')">
+              SPACE
+              <span class="hud-key-action">JUMP</span>
+            </div>
+            <div class="hud-key-node fire" id="btn_fire" onclick="event.stopPropagation(); openKeyRebindPrompt('btn_fire')">
+              M1
+              <span class="hud-key-action">FIRE</span>
+            </div>
+          </div>
+
+          <!-- Tactical Peripheral Controls -->
+          <div class="tactical-grid">
+            <button class="tactical-btn" id="btn-mouse-lock" onclick="event.stopPropagation(); toggleMouseLock()">
+              <span>🔓 MOUSE UNLOCKED</span>
+              <span>360°</span>
+            </button>
+            <button class="tactical-btn" onclick="event.stopPropagation(); triggerDragHeadshotFlick()">
+              <span>🎯 Auto Drag-Headshot</span>
+              <span>-420px</span>
+            </button>
+          </div>
+        </div>
+      </article>
+
+    </section>
+
+    <!-- Autonomous Systems Directory -->
+    <h2 class="section-header">Autonomous Systems Directory</h2>
+    <section class="modules-grid">
+      <div class="module-card">
+        <div class="module-icon-circle">❤️</div>
+        <div>
+          <div class="module-info-title">24/7 Caretaker & Health</div>
+          <div class="module-info-desc">Fatigue mood sensing, continuous screen break warnings & 1 PM / 9 PM meal-time alarms.</div>
+        </div>
+      </div>
+      <div class="module-card">
+        <div class="module-icon-circle">🛒</div>
+        <div>
+          <div class="module-info-title">Shopping Automation</div>
+          <div class="module-info-desc">Flipkart / Amazon shoes search with female neural buy advice: "Bhai yeh theek hai, buy kar do."</div>
+        </div>
+      </div>
+      <div class="module-card">
+        <div class="module-icon-circle">🎮</div>
+        <div>
+          <div class="module-info-title">Free Fire Gaming VIP</div>
+          <div class="module-info-desc">Kernel-level Bluetooth HID touch injection, phone call defense, and zero-ban protection.</div>
+        </div>
+      </div>
+      <div class="module-card">
+        <div class="module-info-circle">🌙</div>
+        <div>
+          <div class="module-info-title">Creator Night-Shift</div>
+          <div class="module-info-desc">Scheduled YouTube / Instagram post at 5:00 AM while creator sleeps.</div>
+        </div>
+      </div>
+      <div class="module-card">
+        <div class="module-info-circle">⚡</div>
+        <div>
+          <div class="module-info-title">Auto-Diagnosis & Repair</div>
+          <div class="module-info-desc">Diagnose device lag, optimize RAM and restore smooth frame rates.</div>
+        </div>
+      </div>
+      <div class="module-card">
+        <div class="module-info-circle">🛡️</div>
+        <div>
+          <div class="module-info-title">Security Shield & Crashlytics</div>
+          <div class="module-info-desc">Direct crash reporting to mdmerajansari16993@gmail.com and zero bypass defense.</div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 24/7 Persistent Floating Edge Pill (Desktop & Mobile) -->
+  <div class="floating-pill" id="floating-pill" title="Tap to open Dual-Mode Hub">
+    <div class="pill-core"></div>
+    <span class="pill-text">JARVIS</span>
+  </div>
+
+  <!-- Dual-Mode Modal Menu (Triggered by Floating Pill) -->
+  <div class="modal-overlay" id="floating-modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title">JARVIS 24/7 DUAL-MODE HUB</h3>
+        <button class="btn-close" id="btn-close-modal">✕</button>
+      </div>
+      <div class="modal-body">
+        <article class="mode-card" onclick="launchMediumMode(); toggleModal(false)">
+          <div class="mode-card-header">
+            <span class="mode-title">Medium Mode</span>
+            <span class="mode-badge">Standard • Free</span>
+          </div>
+          <p class="mode-description">General queries, web search, app opening assistance, and visual interactions.</p>
+        </article>
+
+        <article class="mode-card" onclick="launchAutomaticMode(); toggleModal(false)">
+          <div class="mode-card-header">
+            <span class="mode-title">Automatic Mode</span>
+            <span class="mode-badge gold">1-Day Free Trial</span>
+          </div>
+          <p class="mode-description">Full-device automated hands-free controls. Speaks Hindi welcome greeting.</p>
+        </article>
+
+        <article class="mode-card" onclick="launchGamingMode(); toggleModal(false)">
+          <div class="mode-card-header">
+            <span class="mode-title">Gaming Key-Mapping Mode</span>
+            <span class="mode-badge green">100% Free • Open Access</span>
+          </div>
+          <p class="mode-description">Panda/Octopus style HUD with 1-Tap Key Assignment & 360° Mouse Look.</p>
+        </article>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-notification" id="toast">Directive Acknowledged</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
